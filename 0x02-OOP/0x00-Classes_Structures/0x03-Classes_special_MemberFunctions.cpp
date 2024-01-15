@@ -83,5 +83,21 @@ int main()
     std::cout << "C5: " << c5.name << " (" << c5.age << " years old)" << std::endl;
     std::cout << "C6: " << c6.name << " (" << c6.age << " years old)" << std::endl;
 
+    std::cout << "-----------\n";
+    std::cout << "-----------\n";
+    MyClass cl1{};// default constructor
+    MyClass cl2{cl1};// copy constructor
+    MyClass cl3{"Mahmoud", 35};// parametrized constructor
+    MyClass cl4{std::move(cl2)};// move constructor
+    MyClass cl5("Homos", 35.5);// 35.5 will casted to 35
+    // MyClass cl6{"Homos", 35.5};// this line will cause error, this
+    //+ type of initialization does not cast the values
+    std::cout << "-----------\n";
+    std::cout << "-----------\n";
+    MyClass cl6 = {"Sameh", 40};// parametrized constructor
+    MyClass cl7 = {};// default constructor
+    MyClass cl8 = {std::move(cl6)};// move constructor
+    MyClass cl9 = {cl8};// copy constructor
+
     return 0;
 }
