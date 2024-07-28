@@ -1,5 +1,13 @@
 #include <iostream>
 
+/**
+ * in this example we will see special member functions and different initialization
+ * ways to initialize a class object.
+ */
+
+//##################################################################
+//############################ Class ###############################
+//##################################################################
 class MyClass
 {
 public:
@@ -12,17 +20,24 @@ public:
     MyClass(MyClass&& other);//move constructor
     ~MyClass();//destructor
 };
+//##################################################################
+
+//##################################################################
+//################# member functions implementation ################
+//################################################################## 
 // Note: ":name(""), age(0)" is called member initialization list
 //default constructor
 MyClass::MyClass():name(""), age(0) 
 {
     std::cout<<"*** default constructor called ***\n";
 }
+
 //parametrized constructor
 MyClass::MyClass(std::string n, int num):name(n), age(num) 
 {
     std::cout<<"*** parametrized constructor called ***\n";
 }
+
 //copy constructor
 MyClass::MyClass(MyClass& other)
 {
@@ -30,6 +45,7 @@ MyClass::MyClass(MyClass& other)
     name = other.name;
     age = other.age;
 }
+
 //move constructor
 MyClass::MyClass(MyClass&& other): name(std::move(other.name)),
                                     age(other.age)
@@ -43,7 +59,12 @@ MyClass::~MyClass()
 {
     std::cout<<"** Destructor called **\n";
 }
+//##################################################################
 
+
+//##################################################################
+//################## main function implementation ##################
+//##################################################################
 int main()
 {
     MyClass c1;// default constructor called
@@ -83,14 +104,16 @@ int main()
     std::cout << "C5: " << c5.name << " (" << c5.age << " years old)" << std::endl;
     std::cout << "C6: " << c6.name << " (" << c6.age << " years old)" << std::endl;
 
-    std::cout << "-----------\n";
-    std::cout << "-----------\n";
+    std::cout << "---------------------------------------\n";
+    std::cout << "Initialization Types or Shapes with Class Objects\n";
+    std::cout << "---------------------------------------\n";
     MyClass cl1{};// default constructor
     MyClass cl2{cl1};// copy constructor
     MyClass cl3{"Mahmoud", 35};// parametrized constructor
     MyClass cl4{std::move(cl2)};// move constructor
     MyClass cl5("Homos", 35.5);// 35.5 will casted to 35
-    // MyClass cl6{"Homos", 35.5};// this line will cause error, this
+    // MyClass cl55{"Homos2", 35.5};// will not cast 35.5 to 35 and will cause error
+    // MyClass cl66{"Homos", 35.5};// this line will cause error, this
     //+ type of initialization does not cast the values
     std::cout << "-----------\n";
     std::cout << "-----------\n";

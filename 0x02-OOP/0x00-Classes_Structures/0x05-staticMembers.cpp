@@ -5,6 +5,7 @@ class Example {
    int x = 20;
    static int var4;
    public:
+      // Public static members can be accessed using an instance of the class
       static int count;
       static int var1;
       static const int var2 = 20; // static const variable can be intialized inside class
@@ -13,6 +14,7 @@ class Example {
       Example() {
          var1 = 5;
          count++;
+         // x = 20;// will not cause error
          // var2++; // error because var is constant
       }
 
@@ -60,11 +62,10 @@ int Example::var3;
 /**
  * Accessing static variable that is not initialized here will cause
  * linker error (undefined reference).
- * try to comment the following 2 lines.
+ * try to comment the following 1 line.
 */
 int Example::var1;
-const int Example::var2;
-// after tring commenting previous 2 line comment it again.
+
 void Example::static_func()
 {
    std::cout << "Hello from static_func\n";

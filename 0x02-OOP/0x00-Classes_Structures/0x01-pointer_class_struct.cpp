@@ -31,6 +31,7 @@ int main() {
     // Accessing members through the pointer
     // This would lead to undefined behavior, as myStructPtr is not pointing to a valid object
     // Uncommenting the line below might result in unexpected behavior.
+    // the next line will cause segmentation fault because myStructPtr is not pointing to a valid object
     // std::cout << "Data: " << myStructPtr->data << std::endl;
     return 0;
 }

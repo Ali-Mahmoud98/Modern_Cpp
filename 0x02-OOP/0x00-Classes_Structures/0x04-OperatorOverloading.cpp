@@ -1,5 +1,10 @@
 #include <iostream>
 
+/**
+ * Note: Some operators cannot be overloaded which include sizeof operator,
+ * typeid, Scope resolution (::), Class member access operator (.),
+ * Ternary or conditional operator (?:)
+ */
 class MyClass
 {
 public:
@@ -12,6 +17,8 @@ public:
     MyClass(MyClass&& other);//move constructor
     ~MyClass();//destructor
     MyClass& operator=(const MyClass& other);// operator overloading
+    // the proto type of operator overloading function:
+    // retType operator{operator like =, or ==}(paramType1 param1, paramType2 param2, ...)
     
     // Define the operator<< function for the MyClass class.
     // With this operator<< function defined, you can now use it to print MyClass objects to the console

@@ -14,7 +14,7 @@ public:
 
 // Structure with public members (explicit, though not necessary)
 struct MyStruct {
-    int publicVar1;
+    int publicVar1; // struct members are public by default
     void publicFunction() {
         // the "::"" is called access resolution operator
         std::cout << "Public function in class" << std::endl;
