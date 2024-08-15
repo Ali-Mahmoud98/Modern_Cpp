@@ -2,9 +2,12 @@
 * Encapsulation
 * Abstraction
 * Polymorphism
-* Inheritance
-* Dynamic Binding
-* Message Passing
+* [Inheritance](./0-inheritance.md)
+* [Dynamic Binding](./1-dynamic_binding.md)
+* [Message Passing](./2-message_passing.md)
+* [Enum and Enum Class](./3-enum_enumClass.md)
+* [Nested Class](./4-nested_class.md)
+* [Shallow Copy and Deep Copy](./5-shallow_deep_copy.md)
 
 ## Encapsulation
 Encapsulation is one of the fundamental principles of object-oriented programming (OOP). It refers to the bundling of data (variables) and methods (functions) that operate on the data into a single unit, typically a class. Encapsulation also involves restricting direct access to some of an object's components, which is a means of preventing accidental interference and misuse of the data.
