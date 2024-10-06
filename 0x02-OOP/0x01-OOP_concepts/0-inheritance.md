@@ -301,3 +301,22 @@ int main() {
 2. **Extensibility**: New features can be added to an existing class hierarchy by introducing new derived classes without altering the existing code.
 3. **Hierarchy Representation**: Inheritance helps in representing real-world relationships and hierarchies, making the design more intuitive and structured.
 4. **Polymorphism**: Inheritance is closely related to polymorphism. It allows objects of derived classes to be treated as objects of the base class, enabling dynamic method binding.
+
+
+## Access modifiers with Inheritence
+**public inheritance** makes public members of the base class public in the derived class, and the protected members of the base class remain protected in the derived class.
+
+**protected inheritance** makes the public and protected members of the base class protected in the derived class.
+
+**private inheritance** makes the public and protected members of the base class private in the derived class.
+
+Accessibility Of Inheritance Access:
+![Accessibility Of Inheritance Access](./inheritanceaccess.jpg)
+
+It is good to visit this site: [C++ Public, Protected, and Private Inheritance](https://takeuforward.org/c/c-public-protected-and-private-inheritance/)
+
+### Examples:
+see the following examples:
+* [0x07-public_inheritance.cpp]()
+* [0x07-private_inheritance.cpp]()
+* [0x07-protected_inheritance.cpp]()
