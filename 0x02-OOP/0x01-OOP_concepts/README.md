@@ -9,7 +9,20 @@
 * [Nested Class](./4-nested_class.md)
 * [Shallow Copy and Deep Copy](./5-shallow_deep_copy.md)
 
-## Encapsulation
+## Contents
+* [Encapsulation](#1-encapsulation)
+    * [Explanation](#11-explanation)
+* [Abstraction](#2-abstraction)
+* [Polymorphism](#3-polymorphism)
+    * [Types of Polymorphism](#31-types-of-polymorphism)
+    * [Example of Compile-time Polymorphism](#32-example-of-compile-time-polymorphism)
+        * [Function Overloading](#321-function-overloading)
+        * [Operator Overloading](#322-operator-overloading)
+    * [Example of Run-time Polymorphism](#33-example-of-run-time-polymorphism)
+        * [Virtual Functions](#331-virtual-functions)
+    * [Use Cases of Polymorphism](#34-use-cases-of-polymorphism)
+
+## 1. Encapsulation
 Encapsulation is one of the fundamental principles of object-oriented programming (OOP). It refers to the bundling of data (variables) and methods (functions) that operate on the data into a single unit, typically a class. Encapsulation also involves restricting direct access to some of an object's components, which is a means of preventing accidental interference and misuse of the data.
 
 In simple terms, encapsulation is like a protective shield that keeps the data safe within the object and only allows access to it through well-defined interfaces (methods).
@@ -49,14 +62,14 @@ public:
 };
 
 ```
-### Explanation
+### 1.1. Explanation
 1. **Private Data Members:** The `name` and `age` are private, meaning they cannot be accessed directly from outside the class. This ensures that the internal state of the object is protected from unintended modifications.
 2. **Public Methods:** The class provides public methods (`setName`, `getName`, `setAge`, `getAge`, and `display`) to interact with the private data. These methods act as an interface to the outside world, allowing controlled access to the data.
 3. **Validation**: The `setAge` method includes a simple validation to ensure that the age is positive. This is an example of how encapsulation can help maintain the integrity of the data.
 
 By using encapsulation, we ensure that the internal state of the `Person` object can only modified in a controlled manner, reducing the risk of errors and making the code easier to maintain and understand.
 
-## Abstraction
+## 2. Abstraction
 Abstraction is another fundamental principle of object-oriented programming (OOP). It involves hiding the complex implementation details of a system and exposing only the necessary and relevant parts to the user. The main goal of abstraction is to reduce complexity and allow the programmer to focus on interactions at a higher level.
 
 In simple terms, abstraction is like using a car without needing to understand the intricate details of how the engine works. You just need to know how to drive it.
@@ -128,10 +141,10 @@ int main() {
 **NOTE:** The Abstract class explained in section [0x00-Classes_Structures](../0x00-Classes_Structures/) with example.
 
 
-## Polymorphism
+## 3. Polymorphism
 Polymorphism is one of the core concepts of object-oriented programming (OOP) and it refers to the ability of different classes to be treated as instances of the same class through a common interface. The most common use of polymorphism in C++ is through inheritance and virtual functions. Polymorphism allows for methods to be defined in a base class and overridden in derived classes, enabling objects of different types to be manipulated through a common interface.
 
-### Types of Polymorphism
+### 3.1. Types of Polymorphism
 1. **Compile-time Polymorphism (Static Polymorphism)**:
    - **Function Overloading**: Multiple functions with the same name but different parameters.
    - **Operator Overloading**: Giving special meaning to an existing operator in the context of a user-defined data type.
@@ -139,9 +152,9 @@ Polymorphism is one of the core concepts of object-oriented programming (OOP) an
 2. **Run-time Polymorphism (Dynamic Polymorphism)**:
    - **Virtual Functions**: Functions declared in a base class and overridden in a derived class. The decision about which function to invoke is made at runtime.
 
-### Example of Compile-time Polymorphism
+### 3.2. Example of Compile-time Polymorphism
 
-#### Function Overloading
+#### 3.2.1. Function Overloading
 ```cpp
 #include <iostream>
 using namespace std;
@@ -159,7 +172,7 @@ public:
     }
 };
 ```
-#### Operator Overloading
+#### 3.2.2. Operator Overloading
 ```cpp
 class Complex {
 private:
@@ -177,8 +190,8 @@ public:
 };
 ```
 
-### Example of Run-time Polymorphism
-#### Virtual Functions
+### 3.3. Example of Run-time Polymorphism
+#### 3.3.1. Virtual Functions
 ```cpp
 class Base {
 public:
@@ -215,7 +228,7 @@ In this example:
 - The `show` function is a virtual function. The call to `basePtr->show()` will invoke the `show` function in the `Derived` class because the `Derived` class overrides the `show` function and the function is marked as virtual.
 - The `display` function is not virtual. The call to `basePtr->display()` will invoke the `display` function in the `Base` class because it is not virtual and therefore does not exhibit polymorphic behavior.
 
-### Use Cases of Polymorphism
+### 3.4. Use Cases of Polymorphism
 
 1. **Flexible System Design**:
    Polymorphism allows for designing systems that can be easily extended with new classes without modifying existing code.
@@ -230,4 +243,3 @@ In this example:
    New derived classes can be added without changing the existing code that uses the base class interface, making the system more maintainable and scalable.
 
 Polymorphism is a powerful feature in C++ that enhances the flexibility and maintainability of code, making it a fundamental concept in OOP.
-
