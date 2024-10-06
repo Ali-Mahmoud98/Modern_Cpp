@@ -1,10 +1,31 @@
 # Inheritance
-## Introduction about inheritance
+
+## Contents
+* [1. Introduction about inheritance](#1-introduction-about-inheritance)
+    * [1.1. Example](#11-example)
+        * [1.1.1. Explanation of the code](#111-explanation-of-the-code)
+* [2. Types of Inheritance in C++](#2-types-of-inheritance-in-c)
+    * [2.1. Single Inheritance](#21-single-inheritance)
+        * [2.1.2. Example](#212-example)
+    * [2.2. Multiple Inheritance](#22-multiple-inheritance)
+        * [2.2.1. Example](#221-example)
+    * [2.3. Multilevel Inheritance](#23-multilevel-inheritance)
+        * [2.3.1. Example](#231-example)
+    * [2.4. Hierarchical Inheritance](#24-hierarchical-inheritance)
+        * [2.4.1. Example](#241-example)
+    * [2.5. Hybrid Inheritance](#25-hybrid-inheritance)
+        * [2.5.1. Example](#251-example)
+    * [2.6. Ambiguity in Hybrid Inheritance](#26-ambiguity-in-hybrid-inheritance)
+    * [2.7. Benefits of Inheritance](#27-benefits-of-inheritance)
+* [3. Access Modifiers with Inheritance](#3-access-modifiers-with-inheritence)
+    * [3.1. Examples](#31-examples)
+
+## 1. Introduction about inheritance
 Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a new class (derived class) to inherit properties and behaviors (data members and methods) from an existing class (base class). This promotes code reusability and establishes a natural hierarchy between classes.
 
 In simple terms, inheritance allows you to create a new class that is a modified version of an existing class. The new class can add its own features and modify the behavior of the inherited methods.
 
-### Example
+### 1.1. Example
 Consider we have a base class `Animal` and a derived class `Dog` that inherits from `Animal`.
 
 ```c++
@@ -55,16 +76,16 @@ int main() {
 }
 ```
 
-#### Explanation of the code:
+#### 1.1.1. Explanation of the code:
 1. **Base Class (`Animal`)**: The `Animal` class defines common attributes and behaviors for all animals, such as `name`, `eat()`, and `sleep()`.
 2. **Derived Class (`Dog`)**: The `Dog` class inherits from `Animal`, meaning it automatically has all the properties and methods of `Animal`. It also defines an additional method, `bark()`, which is specific to dogs.
 3. **Inheritance in Action**: When the `Dog` object `myDog` is created, it can use both the methods inherited from `Animal` (`eat()` and `sleep()`) and its own method (`bark()`).
 
-## Types of Inheritance in C++
-### 1. Single Inheritance
+## 2. Types of Inheritance in C++
+### 2.1. Single Inheritance
 In single inheritance, a derived class inherits from only one base class.
 
-#### Example:
+#### 2.1.2. Example:
 ```cpp
 #include <iostream>
 
@@ -92,10 +113,10 @@ int main() {
 }
 ```
 
-### 2. Multiple Inheritance
+### 2.2. Multiple Inheritance
 In multiple inheritance, a derived class inherits from more than one base class. This allows the derived class to inherit features from all its base classes.
 
-#### Example:
+#### 2.2.1. Example:
 ```cpp
 #include <iostream>
 
@@ -132,10 +153,10 @@ int main() {
 }
 ```
 
-### 3. Multilevel Inheritance
+### 2.3. Multilevel Inheritance
 In multilevel inheritance, a derived class is derived from another derived class. This creates a multi-layered inheritance hierarchy.
 
-#### Example:
+#### 2.3.1. Example:
 ```cpp
 #include <iostream>
 
@@ -172,10 +193,10 @@ int main() {
 }
 ```
 
-### 4. Hierarchical Inheritance
+### 2.4. Hierarchical Inheritance
 In hierarchical inheritance, multiple derived classes inherit from a single base class. This allows different derived classes to inherit common functionality from the base class.
 
-#### Example:
+#### 2.4.1. Example:
 ```cpp
 #include <iostream>
 
@@ -217,10 +238,10 @@ int main() {
 }
 ```
 
-### 5. Hybrid Inheritance
+### 2.5. Hybrid Inheritance
 Hybrid inheritance is a combination of two or more types of inheritance. It can involve multiple inheritance, hierarchical inheritance, or multilevel inheritance. Hybrid inheritance can sometimes lead to ambiguity, especially in cases where multiple base classes have methods with the same name.
 
-#### Example:
+#### 2.5.1. Example:
 ```cpp
 #include <iostream>
 
@@ -266,7 +287,7 @@ int main() {
 }
 ```
 
-### Ambiguity in Hybrid Inheritance
+### 2.6. Ambiguity in Hybrid Inheritance
 When multiple base classes contain methods with the same name, it can create ambiguity. This can be resolved using virtual inheritance, which ensures that only one instance of the base class is created, even if it is inherited by multiple derived classes.
 
 ```cpp
@@ -296,14 +317,14 @@ int main() {
 }
 ```
 
-### Benefits of Inheritance
+### 2.7. Benefits of Inheritance
 1. **Code Reusability**: Inheritance allows for the reuse of code from the base class in the derived classes, reducing redundancy and improving maintainability.
 2. **Extensibility**: New features can be added to an existing class hierarchy by introducing new derived classes without altering the existing code.
 3. **Hierarchy Representation**: Inheritance helps in representing real-world relationships and hierarchies, making the design more intuitive and structured.
 4. **Polymorphism**: Inheritance is closely related to polymorphism. It allows objects of derived classes to be treated as objects of the base class, enabling dynamic method binding.
 
 
-## Access modifiers with Inheritence
+## 3. Access modifiers with Inheritence
 **public inheritance** makes public members of the base class public in the derived class, and the protected members of the base class remain protected in the derived class.
 
 **protected inheritance** makes the public and protected members of the base class protected in the derived class.
@@ -311,12 +332,15 @@ int main() {
 **private inheritance** makes the public and protected members of the base class private in the derived class.
 
 Accessibility Of Inheritance Access:
-![Accessibility Of Inheritance Access](./inheritanceaccess.jpg)
+
+<p align="center">
+  <img src="./inheritanceaccess.jpg" alt="Accessibility Of Inheritance Access" />
+</p>
 
 It is good to visit this site: [C++ Public, Protected, and Private Inheritance](https://takeuforward.org/c/c-public-protected-and-private-inheritance/)
 
-### Examples:
+### 3.1. Examples:
 see the following examples:
-* [0x07-public_inheritance.cpp]()
-* [0x07-private_inheritance.cpp]()
-* [0x07-protected_inheritance.cpp]()
+* [0x07-public_inheritance.cpp](./0x07-public_inheritance.cpp)
+* [0x07-private_inheritance.cpp](./0x07-private_inheritance.cpp)
+* [0x07-protected_inheritance.cpp](./0x07-protected_inheritance.cpp)
