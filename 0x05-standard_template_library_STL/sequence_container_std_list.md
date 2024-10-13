@@ -1,5 +1,7 @@
 # List in C++ Standard Template Library (STL)
 
+**For reference:** [List - C++ Reference](https://en.cppreference.com/w/cpp/container/list)
+
 * Doubly Linked List === `std::list`
 * Singly Linked List === `std::forward_list`
 
