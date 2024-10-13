@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdexcept>
 #include "myVector.hpp"
+#include <vector>
 
 int main()
 {
@@ -11,7 +12,7 @@ int main()
     std::cout << "v1 = ";
     v1.print();
     // 2. initializer list
-    MyVector<int> v2 = {1, 2, 3, 4, 5};
+    MyVector<int> v2({1, 2, 3, 4, 5});
     std::cout << "v2.getSize(): " << v2.getSize() << std::endl;
     std::cout << "v2 = ";
     v2.print();
