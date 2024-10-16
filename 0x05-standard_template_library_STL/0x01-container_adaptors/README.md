@@ -1,6 +1,6 @@
 # Container adaptors
 
-**Container adapters** in C++ are a subset of container types that provide a **restricted interface** over existing containers. They adapt the functionality of standard containers like `std::vector`, `std::deque`, or `std::list` to behave in specific ways, typically to restrict access to certain operations while providing a focused set of capabilities. 
+**Container adapters** in C++ are a subset of container types that provide a **restricted interface** over existing containers. They adapt the functionality of standard containers like `std::vector`, `std::deque`, or `std::list` to behave in specific ways, typically to restrict access to certain operations while providing a focused set of capabilities.
 
 The Standard Template Library (STL) in C++ provides three container adapters:
 
@@ -10,15 +10,15 @@ The Standard Template Library (STL) in C++ provides three container adapters:
 
 These adapters limit the way you interact with the underlying container and expose only specific operations that align with their intended use (e.g., stack operations, queue operations).
 
-### 1. `std::stack`
-A **stack** is a **LIFO** (Last In, First Out) data structure. Elements are added and removed only from the top of the stack. The `std::stack` container adapter is built on top of other containers (usually `std::deque` or `std::vector`) and provides the functionality to push, pop, and access the top element.
-
-- **Underlying container:** By default, `std::deque` is used, but you can also use `std::vector` or `std::list`.
-
 ### Resources
 - [Stack](https://en.cppreference.com/w/cpp/container/stack)
 - [Queue](https://en.cppreference.com/w/cpp/container/queue)
 - [Priority Queue](https://en.cppreference.com/w/cpp/container/priority_queue)
+
+### 1. `std::stack`
+A **stack** is a **LIFO** (Last In, First Out) data structure. Elements are added and removed only from the top of the stack. The `std::stack` container adapter is built on top of other containers (usually `std::deque` or `std::vector`) and provides the functionality to push, pop, and access the top element.
+
+- **Underlying container:** By default, `std::deque` is used, but you can also use `std::vector` or `std::list`.
 
 #### Member Functions:
 - **`push(const T& value)`**: Inserts a new element at the top of the stack.
@@ -37,9 +37,9 @@ int main() {
     s.push(10);
     s.push(20);
     s.push(30);
-    
+
     std::cout << "Top element: " << s.top() << std::endl;  // Output: 30
-    
+
     s.pop();
     std::cout << "Top after pop: " << s.top() << std::endl;  // Output: 20
 
@@ -51,7 +51,7 @@ int main() {
 A **queue** is a **FIFO** (First In, First Out) data structure. Elements are added to the back and removed from the front. The `std::queue` container adapter is built on top of containers like `std::deque` (default) or `std::list` and provides operations to add to the back and remove from the front.
 
 - **Underlying container:** By default, `std::deque` is used, but `std::list` can also be used.
-  
+
 #### Member Functions:
 - **`push(const T& value)`**: Inserts a new element at the back of the queue.
 - **`pop()`**: Removes the front element of the queue.
@@ -70,9 +70,9 @@ int main() {
     q.push(10);
     q.push(20);
     q.push(30);
-    
+
     std::cout << "Front element: " << q.front() << std::endl;  // Output: 10
-    
+
     q.pop();
     std::cout << "Front after pop: " << q.front() << std::endl;  // Output: 20
 
@@ -84,7 +84,7 @@ int main() {
 A **priority queue** is a **heap-based** data structure where each element has a priority, and elements are served based on their priority rather than the order they were added. By default, `std::priority_queue` is implemented as a **max-heap**, where the largest element has the highest priority.
 
 - **Underlying container:** By default, `std::vector` is used, but `std::deque` can also be used.
-  
+
 #### Member Functions:
 - **`push(const T& value)`**: Inserts an element into the priority queue in the correct position based on its priority.
 - **`pop()`**: Removes the element with the highest priority (i.e., the largest element by default).
@@ -102,9 +102,9 @@ int main() {
     pq.push(10);
     pq.push(20);
     pq.push(5);
-    
+
     std::cout << "Top element: " << pq.top() << std::endl;  // Output: 20
-    
+
     pq.pop();
     std::cout << "Top after pop: " << pq.top() << std::endl;  // Output: 10
 
