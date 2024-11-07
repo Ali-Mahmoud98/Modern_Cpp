@@ -23,3 +23,20 @@ Genrally there are two kinds of concurrent programming models:
 ## Resources:
 - [Concurrency in C++ : Multithreading and Concurrent Programming](https://medium.com/@lfoster49203/concurrency-in-c-multithreading-and-concurrent-programming-ccf81110c284)
 - [Concurrency in C++ - GeeksforGeeks](https://www.geeksforgeeks.org/cpp-concurrency/)
+
+## Examples:
+### Constructing a Thread
+* [0x00-thread.cpp](./0x00-thread.cpp): this explains thread `join` and `detach`.
+* [0x01-thread.cpp](./0x01-thread.cpp): thread lifecycle management issue.
+* [0x02-thread.cpp](./0x02-thread.cpp): this explains constructing a thread with lambda function, regular function, and functor.
+* [0x03-thread.cpp](./0x03-thread.cpp): this explains in details constructing a thread with functors.
+* [0x04-thread.cpp](./0x04-thread.cpp): this explains in details constructing a thread with RAII.
+* [0x05-thread.cpp](./0x05-thread.cpp): passing arguments to a thread using `std::ref`.
+### Oversubscription
+* [0x06-thread.cpp](./0x06-thread.cpp): getting maximum number of threads supported by hardware.
+* [0x07-design_oversubscription.md](./0x07-design_oversubscription.md): explains Oversubscription in Multithreading.
+* [0x08-scenario_oversubscription.md](./0x08-scenario_oversubscription.md): Example of Oversubscription and thread pools.
+### Resource Management in Multithreading
+* [0x09-data_race_and_mutex.md](./0x09-data_race_and_mutex.md): explains Data Race problems and how to solve them.
+* [0x0A-thread_data_race.cpp](./0x0A-thread_data_race.cpp): data race example.
+* [0x0B-thread_mutex.cpp](./0x0B-thread_mutex.cpp): solving data race by using mutex example.
