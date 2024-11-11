@@ -47,3 +47,8 @@ Genrally there are two kinds of concurrent programming models:
 * [0x0C-deadlock.md](./0x0C-deadlock.md): explains Deadlock problem and how to avoid it.
 * [0x0D-deadlock.cpp](./0x0D-deadlock.cpp): Deadlock example.
 * [0x0E-locking_granularity.md](./0x0E-locking_granularity.md): explains what is locking granularity.
+
+### Unique Lock and Lazy initialization
+* [0x0F-unique_lock.md](./0x0F-unique_lock.md)
+* [0x10-unique_lock.cpp](./0x10-unique_lock.cpp)
+* [0x11-lazy_initialization.cpp](./0x11-lazy_initialization.cpp)
