@@ -52,3 +52,7 @@ Genrally there are two kinds of concurrent programming models:
 * [0x0F-unique_lock.md](./0x0F-unique_lock.md)
 * [0x10-unique_lock.cpp](./0x10-unique_lock.cpp)
 * [0x11-lazy_initialization.cpp](./0x11-lazy_initialization.cpp)
+
+### Condition Variables
+* [0x12-condition_variables.md](./0x12-condition_variables.md): explains Condition Variables in C++ Multithreading
+* [0x13-condition_variables.cpp](./0x13-condition_variables.cpp): Condition Variables in C++ Multithreading example
