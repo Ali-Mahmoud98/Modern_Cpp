@@ -56,3 +56,9 @@ Genrally there are two kinds of concurrent programming models:
 ### Condition Variables
 * [0x12-condition_variables.md](./0x12-condition_variables.md): explains Condition Variables in C++ Multithreading
 * [0x13-condition_variables.cpp](./0x13-condition_variables.cpp): Condition Variables in C++ Multithreading example
+
+### Future, Promise, and Async
+[0x14-future_async_promise (this is a directory)](./0x14-future_async_promise/)
+
+### Different ways to use callable objects
+[0x15-callable_objects.cpp](./0x15-callable_objects.cpp)
