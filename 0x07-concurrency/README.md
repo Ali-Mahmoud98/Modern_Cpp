@@ -62,3 +62,14 @@ Genrally there are two kinds of concurrent programming models:
 
 ### Different ways to use callable objects
 [0x15-callable_objects.cpp](./0x15-callable_objects.cpp)
+
+### Packaged Tasks
+[0x16-packaged_task.cpp](./0x16-packaged_task.cpp)
+[0x17-packaged_task.cpp](./0x17-packaged_task.cpp)
+[0x18-packaged_task.cpp](./0x18-packaged_task.cpp)
+[0x19-packaged_task_real_example.cpp](./0x19-packaged_task_real_example.cpp)
+
+**NOTE:** there are three ways to get a `future`:
+* `promise::get_future()`
+* `packaged_task::get_future()`
+* `async()` returns a `future`
